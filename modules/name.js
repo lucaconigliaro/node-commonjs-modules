@@ -8,4 +8,4 @@ function fullName(firstName, lastName) {
 
 //Esporto la funzione
 module.export = fullName();
-// console.log(fullName());
+console.log(fullName());

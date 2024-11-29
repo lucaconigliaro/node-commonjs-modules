@@ -6,5 +6,5 @@ function hobbies(hobbyOne, hobbyTwo, hobbyThree) {
 }
 
 //Esporto la funzione
-module.export = hobbies()
-console.log(hobbies())
+module.export = hobbies();
+console.log(hobbies());
