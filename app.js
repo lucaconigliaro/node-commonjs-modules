@@ -1,14 +1,17 @@
 const fullName = require(`./modules/name`); //importo la funzione da name.js
 const hobbies = require(`./modules/hobbies`); //importo la funzione da hobbies.js
 
-function myFunction() {
-    const myName = fullName;
-    const myHobbies = hobbies;
-    const myPerson = {};
-    
-    myPerson.fullName = myName;
-    myPerson.hobbies = myHobbies;
+function myFunction() { // Uso le funzioni per ottenere il nome completo e gli hobby
+    const myName = fullName('Luca', 'Conigliaro');
+    const myHobbies = hobbies('Cinema', 'Videogames', 'Gym');
 
-    return myPerson;
+    // Creo e restituisco l'oggetto finale
+    return {
+        fullName: `${myName.firstName} ${myName.lastName}`,
+        hobbies: myHobbies.hobbies
+    };
 }
-console.log(myFunction());
+
+// Mostro il profilo completo
+const profile = myFunction();
+console.log(profile);
